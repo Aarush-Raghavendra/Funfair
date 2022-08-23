@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+    .popout {
+  font-family: Futura, sans-serif;
+  font-weight: 900;
+  font-size: 80px;
+  padding: 80px;
+}
+@-webkit-keyframes ani {
+  0% {
+    transform: translate3d(0, 0, 0);
+    text-shadow: 0em 0em 0 lightblue;
+    color: black;
+  }
+  30% {
+    transform: translate3d(0, 0, 0);
+    text-shadow: 0em 0em 0 lightblue;
+    color: black;
+  }
+  70% {
+    transform: translate3d(0.08em, -0.08em, 0);
+    text-shadow: -0.08em 0.08em lightblue;
+    color: black;
+  }
+  100% {
+    transform: translate3d(0.08em, -0.08em, 0);
+    text-shadow: -0.08em 0.08em lightblue;
+    color: black;
+  }
+}
+@keyframes ani {
+  0% {
+    transform: translate3d(0, 0, 0);
+    text-shadow: 0em 0em 0 lightblue;
+    color: black;
+  }
+  30% {
+    transform: translate3d(0, 0, 0);
+    text-shadow: 0em 0em 0 lightblue;
+    color: black;
+  }
+  70% {
+    transform: translate3d(0.08em, -0.08em, 0);
+    text-shadow: -0.08em 0.08em lightblue;
+    color: black;
+  }
+  100% {
+    transform: translate3d(0.08em, -0.08em, 0);
+    text-shadow: -0.08em 0.08em lightblue;
+    color: black;
+  }
+}
+.popout span {
+  position: relative;
+  display: inline-block;
+  -webkit-animation: ani 1s infinite alternate cubic-bezier(0.86, 0, 0.07, 1);
+          animation: ani 1s infinite alternate cubic-bezier(0.86, 0, 0.07, 1);
+}
+.popout span:nth-last-child(1n) {
+  -webkit-animation-delay: -0.1666666667s;
+          animation-delay: -0.1666666667s;
+}
+.popout span:nth-last-child(2n) {
+  -webkit-animation-delay: -0.3333333333s;
+          animation-delay: -0.3333333333s;
+}
+.popout span:nth-last-child(3n) {
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+  margin: 0;
+  font-family: Arial;
+  font-weight: 800;
+  color: rebeccapurple;
+  background-color: White;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+
+}
+
+.container1 {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background: yellowgreen;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 40px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+#c{
+  margin-top: 200px;
+  text-align: center;
+  color: #75E8F0;
+  font-family: fantasy;
+  font-size: 100px;
+}
+h1{
+ color: blueviolet; 
+}
+.p1{
+  font-size: 80px;
+  color: lightblue;
+  font-family: sans-serif;
+  text-align: center;
+  text-shadow: 
+}
+.p2{
+font-family: ariel;
+font-size: 30px;
+color: yellowgreen;
+}
+.p3{
+  font-size: 80px;
+  background-color: limegreen;
+}
+.p4{
+font-family: fantasy;
+font-size: 30px;
+color: darkred;
+}
+.img{
+  float: right;
+}
+.img1{
+  float: left;
+}
+.background{
+  background-color: floralwhite;
+}
+.title1{
+  font-family: fantasy;
+  font-size: 40px;
+}
+.title2{
+  font-family: fantasy;
+  font-size: 80px;
+  color: lightblue;
+  text-align: center;
+}
+    a.fixed{
+      position:  fixed;
+      bottom:  0;
+      right:  0;
+      width:  300px;
+      boder:  3px solid #73AD21;
+    }
+
+div.footer{
+  background-color: yellowgreen;
+}
+p.footer{
+  font-family: cursive;
+  color: #C2E4E7 ;
+  font-size: 40px;
+  text-align: center;
+}p.footer-p{
+  font-family: sans-serif;
+  color: #C2E4E7;
+  font-size: 20px;
+}
+img.border{
+  width: 70px;
+  height: 70px;
+    border: 2px solid #000000;
+    text-align: center;
+
+}
+img:hover{
+  background-color: yellow;
+}
+p.bottom.{
+  font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+}
+h1{
+  color: black;
+  font-size: 40px;
+  font-family: sans-serif;
+    font-weight: bold;
+     text-decoration: underline;
+}
+.invisible{
+  color: #C2E4E7;
+}
+
+.border {
+  border-style: solid;
+  border-width: medium;
+  float: left;
+  margin-left: 40px;
+}
+.form {
+    position: relative;
+    z-index: 1;
+    background: #e0b955;
+    max-width: 860px;
+    max-height: 300px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 24%);
+}
+.button{
+  color: Black;
+  margin: 0;
+  background-color: greenyellow;
+  height: 50px;
+  width: 90px;
+  margin-left: ;
+
+}
+
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="container1">
+      <h1 class="logo">Barrys Brilliant Funfair</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Rides">Rides</a></li>
+          <li><a href="#Booking">Booking</a></li>
+          <li><a href="#Location">Location</a></li>
+        </ul>
+      </nav>
+    </div>
+    <br><a id="Up"></a>
+    <br>
+<center> <video width="1700" height="400" controls autoplay>
+  <source src="Funfair 1.mp4" type="video/mp4">
+  <source src="Funfair 1.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+</center>
+  </header>
+
+
+    <center><p class="popout">
+  <span>T</span>
+  <span>H</span>
+  <span>E</span><br>
+  <span>F</span>
+  <span>U</span>
+  <span>N</span><br>
+  <span>B</span>
+  <span>E</span>
+  <span>G</span>
+  <span>I</span>
+  <span>N</span>
+  <span>S</span><br>
+    <span>N</span>
+  <span>O</span>
+  <span>W</span>
+ 
+</p>
+ </center>
+
+ <a class="fixed" href="#Up"><img src="https://cdn-icons-png.flaticon.com/512/32/32340.png" height="50" width="50"></a>
+
+
+<p class="p1">How it all works</p>
+<br>
+<br>
+<p class="p2">
+  So when you come in to the funfair (Ashburton Park) you have to go to the ticket booth.<br>
+  They will give you the price for bundles of tickets and after you go buy tickets you can enjoy the rides we have to offer. <br>If you are buying something from the snacks or food stall then you have to pay with money or card.  
+</p>
+
+<marquee behavior="scroll" direction="left" scrollamount="20"><center><p class="p3">Rules</p></center></marquee>
+<br>
+<br>
+<br>
+<br>
+<p class="p4">
+We do not condone smoking or vaping
+<BR>
+For a safe environment it is vital you wait your place in line
+<br>
+Please do not be rude to the staff.
+<br>
+If you have tickets pre booked then you should go wait in the verification section.
+</p>
+<div class="container">
+  
+</div>
+<br>
+<CENTER><img src="https://i.ytimg.com/vi/yjasEfFsvMY/maxresdefault.jpg" class="img-circle" height="400" width="700"></CENTER>
+<br>
+<br>
+<br>
+<a id="About"></a>
+
+<center><p class="p1">About</p></center>
+<br>
+<br>
+<p class="p2">
+"Our funfair has been a journey since 2000. <img class="img" src="https://i2-prod.somersetlive.co.uk/incoming/article3369684.ece/ALTERNATES/s1200/0_MT_SL_270919_DroneshotsofBridgwaterFair_02.jpg" width="830" height="425">Our founder Barry Swinson has created this facility so that kids and adults can enjoy the wide range of rides there are to enjoy. We host funfairs all around the world but our roots start here in england and that is why we are hosting the biggest and most long lasting funfair hosted by yours truly, Barrys Brilliant Funfairs.Co", Barry Swinson (CEO).
+</p>
+<BR>
+<BR>
+<BR>
+<BR>
+<p class="p2">Our company has been part of many succesful moments.  </p>
+
+<a id="Rides"></a>
+
+<div class="container">
+  <p class="p1">Rides</p>  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="https://i0.wp.com/ruddington.info/wp-content/uploads/2019/07/Ruddington-Wakes-GV-for-2019-FI.jpg?fit=840%2C480" alt="Los Angeles" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="https://www.miniatur-wunderland.com/assets/content/layout/mitteldeutschland/mitteldeutschland-kirmes-tag-hauptgasse.jpg" alt="Chicago" style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="https://www.parents.com/thmb/f-OSUCofY6CpONOnIbvFSqDJ4Es=/1800x1200/filters:fill(auto,1)/disney-hollywood-studios-slinky-dog-dash-0d857f72-8b6be45536ce4e52a1f0dd1f486bffff.jpg" alt="New york" style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="https://i.ytimg.com/vi/lubTEp_19ZY/maxresdefault.jpg" alt="New york" style="width:100%;">
+      </div>
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br>
+<br>
+<BR>
+<p class="title2">Rides on demand</p>
+<br>
+<br>
+
+  <br>
+<img src="https://bouncycastlenetwork-res.cloudinary.com/e57f4ba63066b67e122f6ece8430dacf.jpg" class="img" width="600" height="400"><center><h1 class="title1">The Wagon Wheel</h1></center><p class="p2"> The Wagon Wheel also known as the ride of the heros. Is one of the most fastest rides in this funfair. As you can see and hopefully imagine. This ride is very fast paced. Unlike the twister this ride has the potential to make you vomit. A staff will be next to a dispenser which lets you get a free vomit bag. </p>
+<br>
+<br>
+
+<p><b>Maximum Capaciy Per Seat:<b> 150kg</b>
+<p><b>Length of ride (Time):<b> 10 mins</b>
+<p><b>Price:<b> £10 or 1 prebooked ticket</b>
+<br>
+<br>
+<br>
+<Br>
+<br>
+
+<div class="background">
+
+<img src="https://www.irvinleisure.co.uk/wp-content/uploads/2011/01/DSC_0058.jpg" class="img1" width="600" height="400">  <center><h1 class="title1">The Twister</h1></center>
+<p class="p2"><b>The twister</b> is a very enjoyable ride. It is reccomended to people who cant take extreme rides but don't like simple rides. This ride is for people who want to have the thrill of moving rapidly fast in the air but also not feeling dizzy after. This ride is very popular so if tickets online run out please go to the ticket booth and reserve you sport.<br><b>High Demands</b></p>
+<br>
+<BR>
+<p><b>Maximum Capaciy Per Seat:<b> 150kg</b>
+<p><b>Length of ride (Time):<b> 5 mins</b>
+  <p><b>Price:<b> £5 or 1 tickets</b>
+<br>
+<br></div>
+  <br>
+<img src="https://i2-prod.examinerlive.co.uk/news/west-yorkshire-news/article20830415.ece/ALTERNATES/s1200b/0_ctr_hde_160621_Devil-Rock-Ride.jpg" class="img" width="600" height="400"><center><h1 class="title1">The Air Jugler</h1></center><p class="p2"> Like the Wagon Wheel this ride is very fast and vomit bags are handed out if needed. This ride goes up in the air so please keep in mind that you are sure you can handle this sort of ride. <b>Warning: As tall as a building crane</b>.</p>
+<br>
+<br>
+
+<p><b>Maximum Capaciy Per Seat:<b> 100kg</b>
+<p><b>Length of ride (Time):<b> 5 mins</b>
+<p><b>Price:<b> £10 or 1 tickets</b>
+<br>
+<br>
+<br>
+<Br>
+<br>
+
+<div class="background">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/16-doubleshot.jpg/175px-16-doubleshot.jpg" class="img1" width="600" height="400">  <center><h1 class="title1">Double Shot</h1></center>
+<p class="p2">This ride is all the way up in the air. An age limit is required because it could affect health. Please check with staff for more info. The double shot is an amusing ride and is on the left side of the park. High Demand
+<br>
+<BR>
+<br>
+<Br>
+<p><b>Maximum Capaciy Per Seat:<b> 150kg</b>
+<p><b>Length of ride (Time):<b> 5 mins</b>
+  <p><b>Price:<b> £5 or 1 prebooked ticket</b>
+<br>
+</div>
+<img src="https://www.rightthisminute.com/sites/default/files/styles/twitter_card/public/videos/images/the-devils-wheel-video.jpg?itok=apxNmJy8" class="img" width="600" height="400">  <center><h1 class="title1">Devil's Wheel</h1></center>
+<p class="p2">How the devils wheel works is that you get twisted around and you are with some people. It is on the ground. If you fall of the wheel then you are out. This is on low demand so seats are available.
+<br>
+<BR>
+<br>
+<Br>
+<p><b>Maximum Capaciy Per Seat:<b> 150kg</b>
+<p><b>Length of ride (Time):<b> 5 mins</b>
+  <p><b>Price:<b> £5 or 1 prebooked ticket</b>
+
+
+<div class="background">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Hydro_Max.JPG/175px-Hydro_Max.JPG" class="img1" width="600" height="400">  <center><h1 class="title1">Booster Fabbri</h1></center>
+<p class="p2">The ride contains a series of twists and turns. This ride is sugggested to people who have experience with dizziness and they know how to handle it. This ride is on high demand and seeling out so book quickly.
+<br>
+<BR>
+<br>
+<Br>
+<p><b>Maximum Capaciy Per Seat:<b> 100kg</b>
+<p><b>Length of ride (Time):<b> 5 mins</b>
+  <p><b>Price:<b> £10 or 1  prebooked ticket</b>
+<br>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <p class="p1">Booking</p>
+  <a id="Booking"></a> 
+<div class="form" onsubmit="myFunction()">
+ <h1>Ticket</h1>
+ <br>
+ <Br>
+<center>
+  <form>
+<div class="border" ><input type="text" name="fname" id="fname"  placeholder="First Name"/ required placeholder="necessary">
+<br>
+<input type="text" name="lname" id="lname" placeholder="Last Name"/ required placeholder="necessary">
+</div>
+<div class="border" >
+<input type="number" placeholder="How Many Adults?"/ required placeholder="necessary">
+
+
+<Br>
+<input type="number" placeholder="How many Children?" / required placeholder="necessary">
+</div>
+
+<div class="border">
+            <div width="120"></div>
+            <select required >
+              <option value="The Twister" >Select The Ride</option>
+              <option value="1">The Twister</option>
+              <option value="2">Double Shot</option>
+              <option value="3">Air Jugler</option>
+              <option value="4">Double Shot</option>
+              <option value="5">Devils Wheel</option>
+              <option value="6">Booster Fabbri</option>
+              <option value="7">Other</option>
+          </select>
+<Br>
+<input type="date" name="pas" id="pas" / required placeholder="necessary">
+<br>
+</div></center>
+<Br>
+<br>
+<br>
+<br>
+<button class="button">Submit</button>
+<br></div></form>
+  <p class="p1">Location</p>
+  <a id="Location"></a> 
+<br>
+<br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2489.9544523010427!2d-0.06990376511476228!3d51.385515162234206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487600e0e59e7f3b%3A0xcd03cfcaab31870!2sAshburton%20Park!5e0!3m2!1sen!2suk!4v1660816631758!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2491.619159849659!2d-0.11402668403221114!3d51.35491332966161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876075c0c98c0af%3A0x2971d7def6960d85!2sPurley%20Way%20Playing%20Fields!5e0!3m2!1sen!2suk!4v1660816696056!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2493.884768369584!2d-0.25674848255615235!3d51.313244300000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4875e24bd7dc079b%3A0x3281a9fd4df6ee68!2sEpsom%20Downs%20Racecourse!5e0!3m2!1sen!2suk!4v1660816769501!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<br>
+<br>
+<Br>
+<Br>
+
+<div class="footer"><br><br><p class="footer">Barrys Brilliant Adventure</p>
+<br>
+<bR>
+<p class="footer-p"><center>Barrys Brilliant Adventure Funfair Park was established in 2011.<br> Our main centres are in the UK but we are a famous company that host funfair's all around europe.<br> We are currently not hosting our summer funfair blasts in Ukraine because of the war between Russia. <br>We are currently hosting the summer blaster events. In the UK we range up to 30 different branches in London. <br>Out side of London we host 10 units there. In other contries we only host up to 5 branches. </center></p>
+
+<br>
+<br><center>
+<img class="border" src="https://cdn-icons-png.flaticon.com/512/152/152810.png" height="50" width="50">
+<img class="border" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/TikTok_Icon_Black.svg/1200px-TikTok_Icon_Black.svg.png" height="50" width="50">
+<img class="border" src="https://cdn-icons-png.flaticon.com/512/59/59439.png" height="50" width="50">
+<img class="border" src="https://cdn-icons-png.flaticon.com/512/87/87390.png" height="50" width="50"></center>
+<br>
+<br>
+<Br>
+<br>
+<br>
+<img src="https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/007/873/original/email.png" height="60" width="60"><p class="bottom">support@barrysfunair.com</p>
+<img src="http://cdn.onlinewebfonts.com/svg/img_359708.png" height="60" width="60"><p class="bottom">0785112436<br></p>
+<img src="http://cdn.onlinewebfonts.com/svg/img_93271.png" height="60" width="60"><p class="bottom">Our office is located at CR01B2<br></p>
+</div>
+
+<script>
+  function myFunction(){
+    alert("The form was submitted")
+  }
+</script>
+</body>
+</html>
